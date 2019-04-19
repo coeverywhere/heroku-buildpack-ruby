@@ -85,6 +85,7 @@ WARNING
         return true unless precompile.is_defined?
 
         topic("Preparing app for Rails asset pipeline")
+        puts "LD_LIBRARY_PATH: #{ENV['LD_LIBRARY_PATH']}"
 
         @cache.load_without_overwrite public_assets_folder
         @cache.load default_assets_cache
